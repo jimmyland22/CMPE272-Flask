@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CMPE 272</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+ <div class="row justify-content-center">
+   <div class="col-md-6">
+     <div class="p-5">
+Twitter users that matches your search
+     </div>
+	  {% for tweet in tweets %}
+	  <div class="card mt-2">
+	    <div class="card-body">
+	      <div class="card-text">
+		  {{ tweet._json.name }}
+	      </div>
+            </div>
+	  </div>
+	  {% endfor %}
+       </div>
+   </div>
+ </div>
+</body>
+</html>
